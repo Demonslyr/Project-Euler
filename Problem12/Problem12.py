@@ -4,13 +4,14 @@
 from decimal import Decimal
 from copy import copy
 from math import floor
+from math import sqrt
 import sys
 
 GetNthTriangleNumber = lambda n: n*(n+1)/2
 
 def GetDivisors(n):
     divisors = []
-    start = floor(n**(.5))+1
+    start = floor(n/2)+1
     while start > 0:
         if not n%start:
             divisors.append(start)
