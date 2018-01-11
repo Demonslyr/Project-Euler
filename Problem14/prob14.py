@@ -56,7 +56,6 @@ def nextCollatzArray(array):
             arr[i] = [ arr[i][0], nextCollatzNum( arr[i][1]) ]
         arr = [ elem for elem in arr if elem[1] ]
         length = len(arr)
-        # print length
     return arr[0][0]
      
 def nextCollatzNum(num):
