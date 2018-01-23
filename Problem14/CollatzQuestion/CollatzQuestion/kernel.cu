@@ -33,8 +33,6 @@ int main()
 	cudaEventCreate(&start);
 	cudaEventCreate(&stop);
 
-
-
 	const int arraySize = 1000000;
 	int *c = new int[arraySize];
 

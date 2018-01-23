@@ -12,7 +12,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 def fibUnderValue(value):
     fibNumbers = [1,2]
     list(next(iter(())) if (fibNumbers[-1]+fibNumbers[-2] >= value) else fibNumbers.append(fibNumbers[-1]+fibNumbers[-2]) for x in itertools.count())
-    return fibNumbers
+    return [x for x in fibUnderValue(value) if x%2 == 0]
 
 def evenFibUnderValue(value):
     #setup
@@ -34,7 +34,7 @@ def evenFibUnderValue(value):
 def main():
     value = 4000000
     print(sum(evenFibUnderValue(value)))
-    print(sum([x for x in fibUnderValue(value) if x%2 == 0]))
+    print(sum(fibUnderValue(value)))
 
 if __name__ == "__main__":
     main()
